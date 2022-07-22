@@ -1,12 +1,11 @@
 # math test
 Simple cosole program that gives you random mathematical operations to solve.
 
-## How to use
-Very simple, run the program and just type the correct answer.
-
-If you dont know the answer, skip by just pressing ENTER (but don't type anything!)
-
-If wanna stop and see your score, press CTRL + C
+## How to use:
+1) Run the program by entering: `python main.py` into the terminal 
+2) Begin guessing by entering a number into the terminal
+3) If you dont know the answer, skip by pressing ENTER (but don't type anything!)
+4) If you want to exit and see your score, press CTRL + C
 
 ## Note
 If you find any errors with math operations, please tell me by creating an issue.
