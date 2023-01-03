@@ -2,13 +2,13 @@
 Simple cosole program that gives you random mathematical operations to solve.
 
 ## How to use:
-1) Run the program by entering: `python main.py` into the terminal 
-2) Begin guessing by entering a number into the terminal
+1) Run the program by entering: `python3 main.py` into the terminal 
+2) Begin solving operation by entering a number into the terminal
 3) If you don't know the answer, skip by pressing ENTER (but don't type anything!)
 4) If you want to exit and see your score, press CTRL + C
 
 ## Note
-If you find any errors with math operations, please tell me by creating an issue.
+If you find any errors with this program, please tell me by creating an issue.
 
 ## Screenshots
 ![ConEmu64_6ZCODM6LNG](https://user-images.githubusercontent.com/78962948/172199862-375ebc00-8ec9-428a-ac30-9ff1119e7c07.png)
