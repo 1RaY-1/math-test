@@ -9,13 +9,6 @@ import operator
 
 delay = 1 # <-- wait between new operations
 
-# clear console
-clear_console = True # <-- if want to clear console
-limit_chars = 10 # <-- clear console after X operations
-
-
-count = 0 # <-- count operations
-
 
 ops = {'+':operator.add,
     '-':operator.sub,
@@ -30,26 +23,21 @@ count_skipped = 0
 true = "Correct"
 false = "Incorrect"
 Help = """
-Try to type the correct number.
+Calculate the operation.
 
-To skip, just press ENTER
+To skip: press ENTER (but don't type anything)
 
-To stop, press CTRL + C
+To stop: CTRL + C
 """
-
-def clear():
-    import platform
-    import os
-    os.system('cls') if platform.system() == 'Windows' else os.system('clear')
 
 # if you get to much numbers after a dot
 # you can truncate it until it'll have 3 numbers after a dot
+# for example, instead of typing: 3.5641566 just type: 3.564
 def truncate(num, dig):
     stepper = 10.0 ** dig
     return math.trunc(stepper *num) / stepper
 
 def main():
-    global count
     global limit_chars
     global clear_console
     global count_correct
@@ -88,16 +76,12 @@ def main():
 
             time.sleep(delay)
 
-            count += 1
-            if clear_console and count == limit_chars:
-                count = 0
-                clear()
+
 
         except KeyboardInterrupt:
             total = count_correct+count_incorrect+count_skipped
-            if clear_console: clear()
-
             print("""
+
 Correct answers: {}/{}
 
 Incorrect answers: {}/{}
@@ -108,7 +92,7 @@ Skipped: {}/{}
             exit(0)
 
         except ValueError:
-            print("Oh, please type numbers only!!")
+            print("Oh please, type numbers only!!")
             exit(1)
 
 if __name__ == '__main__':
